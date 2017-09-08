@@ -25,4 +25,5 @@ t = t.replace("[[issueslink]]",j[i]["html_url"] + "/issues");
 t = t.replace("[[pullslink]]",j[i]["html_url"] + "/pulls");
 t = t.replace("[[projectslink]]",j[i]["html_url"] + "/projects");
 t = t.replace("[[wkilink]]",j[i]["html_url"] + "/wiki");
+document.getElementById(place).innerHTMl += t;
 }})}
