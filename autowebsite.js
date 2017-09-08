@@ -1,5 +1,5 @@
 function autoWebsite(user,template,place){
-fetch("https://api.github.com/repos/" + user,{method:'get'}).then(function (r){
+fetch("https://api.github.com/users/" + user + "/repos",{method:'get'}).then(function (r){
 return r.json();
 }).then(function (j){
 for(var i = 0;i < j.length;i++){
@@ -19,6 +19,7 @@ t = t.replace("[[stargazers]]",j[i]["stargazers_count"]);
 t = t.replace("[[watchers]]",j[i]["watchers_count"]);
 t = t.replace("[[forks]]",j[i]["fork_count"]);
 t = t.replace("[[issues]]",j[i]["open_issues_count"]);
+t = t.replace("[[desc]]",j[i]["description"]);
 t = t.replace("[[homepage]]",j[i]["homepage"]);
 t = t.replace("[[homepagedisplay]]",j[i]["homepage"] ? "":"hidden");
 t = t.replace("[[issueslink]]",j[i]["html_url"] + "/issues");
