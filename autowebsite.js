@@ -6,8 +6,8 @@ for(var i = 0;i < j.length;i++){
 var t = document.getElementById(template).innerHTML;
 t = t.replace("[[name]]",j[i].name);
 t = t.replace("[[fullname]]",j[i]["full_name"]);
-t = t.replace("[[user]]",j[i].user.login);
-t = t.replace("[[avatar]]",j[i].user["avatar_url"]);
+t = t.replace("[[user]]",j[i].owner.login);
+t = t.replace("[[avatar]]",j[i].owner["avatar_url"]);
 t = t.replace("[[link]]",j[i]["html_url"]);
 t = t.replace("[[issuesdisplay]]",j[i].issues ? "":"hidden");
 t = t.replace("[[projectdisplay]]",j[i].projects ? "":"hidden");
@@ -26,5 +26,5 @@ t = t.replace("[[issueslink]]",j[i]["html_url"] + "/issues");
 t = t.replace("[[pullslink]]",j[i]["html_url"] + "/pulls");
 t = t.replace("[[projectslink]]",j[i]["html_url"] + "/projects");
 t = t.replace("[[wikilink]]",j[i]["html_url"] + "/wiki");
-document.getElementById(place).innerHTMl += t;
+document.getElementById(place).innerHTML += t;
 }})}
