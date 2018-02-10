@@ -1,5 +1,7 @@
 # auto-website
 Auto-generate a website based off of your Github account.
+## Example
+[Try it here!](https://kyleplo.github.io/auto-website/example.html)
 ## Docs
 First, embed the script
 `<script src="https://kyleplo.github.io/auto-website/autowebsite.js"></script>`
